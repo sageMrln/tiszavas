@@ -1,0 +1,315 @@
+<!doctype html>
+<html lang="hu">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TiszaVas Kereskedés – vas, szerszám, építőanyag | Tiszavasvári</title>
+<meta name="description" content="TiszaVas Kereskedés Tiszavasváriban: vas- és acéltermékek, szerszámok, csavarok, csövek, hegesztés, festékek, elektromos anyagok és építőanyagok. Több mint 45 márka egy helyen.">
+<meta property="og:title" content="TiszaVas Kereskedés">
+<meta property="og:description" content="Vas, szerszám, építőanyag – egy helyen, Tiszavasváriban.">
+<meta property="og:image" content="logo.webp">
+<meta name="theme-color" content="#0b0b0c">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,600;0,800;1,800&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0b0b0c;--bg2:#121214;--line:#232326;--steel:#c9ccd1;--mute:#8b8f96;--red:#e3202b;--red2:#ff3b45;--r:14px}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:#eceef1;font:16px/1.6 Barlow,system-ui,sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%}
+.wrap{width:min(1180px,92vw);margin:auto}
+h1,h2,h3,.cond{font-family:"Barlow Condensed",sans-serif;text-transform:uppercase;letter-spacing:.02em;line-height:1}
+/* diamond plate */
+.plate{background-color:#1a1b1e;background-image:
+ linear-gradient(135deg,transparent 46%,rgba(255,255,255,.07) 48%,rgba(255,255,255,.16) 50%,rgba(0,0,0,.35) 52%,transparent 54%),
+ linear-gradient(45deg,transparent 46%,rgba(255,255,255,.07) 48%,rgba(255,255,255,.16) 50%,rgba(0,0,0,.35) 52%,transparent 54%);
+ background-size:26px 14px,26px 14px;background-position:0 0,13px 7px}
+
+/* top bar */
+.top{position:fixed;inset:0 0 auto;z-index:50;transition:background .3s,border-color .3s;border-bottom:1px solid transparent}
+.top.solid{background:rgba(11,11,12,.86);backdrop-filter:blur(14px);border-color:var(--line)}
+.top .wrap{display:flex;align-items:center;gap:22px;height:68px}
+.brand{font:800 26px/1 "Barlow Condensed";letter-spacing:.01em}
+.brand b{color:var(--red)}
+.nav{display:flex;gap:26px;margin-left:auto;font-weight:600;font-size:14px;letter-spacing:.06em;text-transform:uppercase;color:var(--steel)}
+.nav a:hover{color:#fff}
+.status{display:flex;align-items:center;gap:8px;font-size:13px;font-weight:600;padding:7px 12px;border:1px solid var(--line);border-radius:99px;background:#111;white-space:nowrap}
+.dot{width:8px;height:8px;border-radius:50%;background:#555}
+.open .dot{background:#2fd160;box-shadow:0 0 0 0 rgba(47,209,96,.6);animation:ping 1.8s infinite}
+.closed .dot{background:var(--red)}
+@keyframes ping{70%{box-shadow:0 0 0 9px rgba(47,209,96,0)}100%{box-shadow:0 0 0 0 rgba(47,209,96,0)}}
+
+/* hero */
+.hero{position:relative;min-height:100svh;display:grid;place-items:center;padding:120px 0 80px;isolation:isolate;overflow:hidden}
+.hero::before{content:"";position:absolute;inset:0;z-index:-2;background:radial-gradient(60% 50% at 50% 38%,rgba(227,32,43,.28),transparent 70%),radial-gradient(90% 70% at 50% 120%,#000,transparent),var(--bg)}
+.hero .plate{position:absolute;inset:auto 0 0;height:34%;z-index:-1;-webkit-mask:linear-gradient(transparent,#000 70%);mask:linear-gradient(transparent,#000 70%);opacity:.75}
+.sparks{position:absolute;inset:0;width:100%;height:100%;z-index:-1;pointer-events:none}
+.hero-in{text-align:center;display:grid;justify-items:center;gap:30px}
+.logo{width:min(640px,86vw);border-radius:10px;box-shadow:0 30px 80px -20px rgba(227,32,43,.45),0 0 0 1px rgba(255,255,255,.06);transform:perspective(900px) rotateX(6deg);animation:rise 1.1s cubic-bezier(.2,.8,.2,1) both}
+@keyframes rise{from{opacity:0;transform:perspective(900px) rotateX(18deg) translateY(30px)}}
+.hero h1{font-size:clamp(40px,7.4vw,92px);font-weight:800;max-width:14ch}
+.hero h1 em{font-style:italic;color:var(--red);text-shadow:0 0 40px rgba(227,32,43,.5)}
+.hero p{color:var(--steel);font-size:clamp(16px,2vw,19px);max-width:52ch}
+.ctas{display:flex;gap:14px;flex-wrap:wrap;justify-content:center}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:16px 26px;border-radius:12px;font-weight:600;letter-spacing:.03em;transition:transform .2s,box-shadow .2s,background .2s}
+.btn svg{width:20px;height:20px}
+.btn-red{background:var(--red);box-shadow:0 12px 30px -10px rgba(227,32,43,.8)}
+.btn-red:hover{background:var(--red2);transform:translateY(-2px)}
+.btn-ghost{border:1px solid #3a3b40;background:rgba(255,255,255,.03)}
+.btn-ghost:hover{border-color:#777;transform:translateY(-2px)}
+.scroll{position:absolute;bottom:26px;left:50%;translate:-50%;width:24px;height:38px;border:2px solid #444;border-radius:12px}
+.scroll::after{content:"";position:absolute;left:50%;top:7px;width:4px;height:8px;margin-left:-2px;border-radius:2px;background:var(--red);animation:sc 1.6s infinite}
+@keyframes sc{to{transform:translateY(12px);opacity:0}}
+
+/* stats */
+.stats{border-block:1px solid var(--line);background:var(--bg2)}
+.stats .wrap{display:grid;grid-template-columns:repeat(4,1fr)}
+.stat{padding:30px 20px;border-left:1px solid var(--line)}
+.stat:first-child{border-left:0}
+.stat b{display:block;font:800 44px/1 "Barlow Condensed";color:#fff}
+.stat b i{color:var(--red);font-style:normal}
+.stat span{color:var(--mute);font-size:14px}
+
+section{padding:110px 0}
+.head{display:flex;align-items:end;justify-content:space-between;gap:30px;margin-bottom:50px;flex-wrap:wrap}
+.kicker{color:var(--red);font:700 13px/1 Barlow;letter-spacing:.24em;text-transform:uppercase;margin-bottom:14px;display:flex;align-items:center;gap:10px}
+.kicker::before{content:"";width:28px;height:2px;background:var(--red)}
+h2{font-size:clamp(38px,5.4vw,64px);font-weight:800}
+.head p{color:var(--mute);max-width:42ch}
+
+/* categories */
+.cats{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.cat{position:relative;padding:30px 26px 28px;border:1px solid var(--line);border-radius:var(--r);background:linear-gradient(180deg,#141416,#0e0e10);overflow:hidden;transition:transform .35s cubic-bezier(.2,.8,.2,1),border-color .35s}
+.cat::after{content:"";position:absolute;inset:auto -40% -60% -40%;height:120%;background:radial-gradient(closest-side,rgba(227,32,43,.22),transparent);opacity:0;transition:opacity .4s}
+.cat:hover{transform:translateY(-6px);border-color:#4a1a1d}
+.cat:hover::after{opacity:1}
+.cat svg{width:44px;height:44px;stroke:var(--red);stroke-width:1.7;fill:none;stroke-linecap:round;stroke-linejoin:round;margin-bottom:22px}
+.cat h3{font-size:22px;margin-bottom:10px}
+.cat p{color:var(--mute);font-size:14.5px;line-height:1.55}
+.cat .n{position:absolute;top:22px;right:24px;font:800 15px "Barlow Condensed";color:#333}
+
+/* brands */
+.brands{background:var(--bg2);border-block:1px solid var(--line);overflow:hidden}
+.marq{display:flex;gap:18px;width:max-content;animation:mq 60s linear infinite}
+.marq.rev{animation-direction:reverse;margin-top:18px}
+.brands:hover .marq{animation-play-state:paused}
+@keyframes mq{to{transform:translateX(-50%)}}
+.tile{width:190px;height:96px;flex:none;display:grid;place-items:center;padding:14px 20px;background:#fff;border-radius:12px;filter:grayscale(1) contrast(1.05);opacity:.78;transition:filter .3s,opacity .3s,transform .3s}
+.tile:hover{filter:none;opacity:1;transform:scale(1.05)}
+.tile img{max-height:62px;object-fit:contain}
+.fade{-webkit-mask:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);mask:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}
+
+/* why */
+.why{display:grid;grid-template-columns:1.1fr 1fr;gap:60px;align-items:center}
+.why-art{position:relative;aspect-ratio:4/3.4;border-radius:20px;overflow:hidden;border:1px solid var(--line)}
+.why-art .plate{position:absolute;inset:0}
+.why-art .big{position:absolute;inset:0;display:grid;place-items:center;font:italic 800 clamp(90px,14vw,190px)/1 "Barlow Condensed";color:transparent;-webkit-text-stroke:2px rgba(227,32,43,.9);text-shadow:0 0 60px rgba(227,32,43,.35)}
+.why-art .tag{position:absolute;left:22px;bottom:22px;padding:10px 14px;background:rgba(0,0,0,.7);backdrop-filter:blur(6px);border-radius:10px;font-weight:600;font-size:14px;border:1px solid #333}
+.points{display:grid;gap:26px;margin-top:34px}
+.pt{display:grid;grid-template-columns:52px 1fr;gap:18px}
+.pt i{width:52px;height:52px;border-radius:12px;display:grid;place-items:center;background:#1a0b0c;border:1px solid #3d1416;font:800 20px "Barlow Condensed";color:var(--red);font-style:normal}
+.pt h3{font-size:22px;margin-bottom:6px}
+.pt p{color:var(--mute)}
+
+/* contact */
+.contact{display:grid;grid-template-columns:340px 1fr 300px;gap:18px}
+.card{border:1px solid var(--line);border-radius:var(--r);background:var(--bg2);padding:26px;border-top:2px solid var(--red)}
+.card h3{font-size:20px;color:var(--red);margin-bottom:18px;display:flex;align-items:center;gap:10px}
+.card h3 svg{width:20px;height:20px;stroke:currentColor;fill:none;stroke-width:2}
+.hours{list-style:none}
+.hours li{display:flex;justify-content:space-between;padding:11px 0;border-bottom:1px solid #1d1d20;color:var(--mute)}
+.hours li b{color:#fff;font-weight:600}
+.hours li.today{color:#fff}
+.hours li.today span::after{content:"ma";margin-left:8px;font-size:11px;padding:2px 7px;border-radius:99px;background:var(--red);color:#fff;font-weight:600;letter-spacing:.05em;vertical-align:2px}
+.map{border-radius:var(--r);overflow:hidden;border:1px solid var(--line);min-height:380px;position:relative}
+.map iframe{position:absolute;inset:0;width:100%;height:100%;border:0;filter:invert(.92) hue-rotate(180deg) saturate(.6) brightness(.95)}
+.links{display:grid;gap:10px}
+.links a{display:flex;align-items:center;gap:12px;padding:14px 16px;border:1px solid #26262a;border-radius:10px;background:#0e0e10;font-weight:600;font-size:15px;transition:border-color .2s,background .2s}
+.links a:hover{border-color:var(--red);background:#160c0d}
+.links svg{width:19px;height:19px;stroke:var(--red);fill:none;stroke-width:2;flex:none}
+
+footer{border-top:1px solid var(--line);padding:46px 0 120px;color:var(--mute);font-size:14px}
+footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;align-items:center}
+
+/* mobile action bar */
+.dock{display:none}
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .8s cubic-bezier(.2,.8,.2,1),transform .8s cubic-bezier(.2,.8,.2,1)}
+.reveal.in{opacity:1;transform:none}
+
+@media (max-width:980px){
+ .cats{grid-template-columns:repeat(2,1fr)}
+ .contact{grid-template-columns:1fr}
+ .map{min-height:320px}
+ .why{grid-template-columns:1fr}
+ .nav{display:none}
+ .status{margin-left:auto}
+ .stats .wrap{grid-template-columns:repeat(2,1fr)}
+ .stat:nth-child(3){border-left:0}
+ .stat{border-top:1px solid var(--line)}
+ .stat:nth-child(-n+2){border-top:0}
+}
+@media (max-width:560px){
+ section{padding:80px 0}
+ .cats{grid-template-columns:1fr}
+ .brand{font-size:22px}
+ .status{font-size:12px;padding:6px 10px}
+ .dock{display:grid;grid-template-columns:1fr 1fr;gap:10px;position:fixed;left:12px;right:12px;bottom:12px;z-index:60}
+ .dock a{display:flex;justify-content:center;align-items:center;gap:8px;padding:15px;border-radius:14px;font-weight:600;background:#1b1b1e;border:1px solid #333;box-shadow:0 10px 30px rgba(0,0,0,.6)}
+ .dock a:first-child{background:var(--red);border-color:var(--red)}
+ .dock svg{width:18px;height:18px}
+ .scroll{display:none}
+ .tile{width:150px;height:80px}
+}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+
+<header class="top" id="top">
+ <div class="wrap">
+  <a class="brand" href="#">TISZA<b>VAS</b></a>
+  <nav class="nav">
+   <a href="#termekek">Termékek</a><a href="#markak">Márkák</a><a href="#rolunk">Rólunk</a><a href="#kapcsolat">Kapcsolat</a>
+  </nav>
+  <div class="status" id="status"><span class="dot"></span><span id="status-t">Nyitvatartás</span></div>
+ </div>
+</header>
+
+<section class="hero">
+ <canvas class="sparks" id="sparks"></canvas>
+ <div class="plate"></div>
+ <div class="wrap hero-in">
+  <img class="logo" src="logo.webp" alt="TiszaVas Kereskedés logó" width="1417" height="505">
+  <h1>Vas, szerszám, <em>építőanyag</em> – egy helyen.</h1>
+  <p>Acéltól a csavarig, festéktől a hegesztőpálcáig: minden, ami a műhelybe, az építkezésre és a házkörüli munkákhoz kell – szakértő tanácsadással, Tiszavasváriban.</p>
+  <div class="ctas">
+   <a class="btn btn-red" href="tel:+36707736427"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>70/773 64 27</a>
+   <a class="btn btn-ghost" href="#kapcsolat"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s7-6.2 7-12a7 7 0 1 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg>Nyitvatartás és térkép</a>
+  </div>
+ </div>
+ <span class="scroll"></span>
+</section>
+
+<div class="stats">
+ <div class="wrap">
+  <div class="stat reveal"><b>45<i>+</i></b><span>márka a polcokon</span></div>
+  <div class="stat reveal"><b>8</b><span>termékkör egy boltban</span></div>
+  <div class="stat reveal"><b>6<i>/</i>7</b><span>nap nyitva, szombaton is</span></div>
+  <div class="stat reveal"><b>1</b><span>helyi bolt, Tiszavasváriban</span></div>
+ </div>
+</div>
+
+<section id="termekek">
+ <div class="wrap">
+  <div class="head reveal">
+   <div><div class="kicker">Kínálat</div><h2>Termékkategóriák</h2></div>
+   <p>Ha nincs készleten, rendelésre beszerezzük. Kérdezzen bátran – telefonon is segítünk kiválasztani a megfelelőt.</p>
+  </div>
+  <div class="cats">
+   <article class="cat reveal"><span class="n">01</span><svg viewBox="0 0 48 48"><path d="M6 14h36v6H6zM10 20v20M38 20v20M6 34h36"/></svg><h3>Vas és acél</h3><p>Szögvasak, laposvasak, acéllemezek, zártszelvények és csövek.</p></article>
+   <article class="cat reveal"><span class="n">02</span><svg viewBox="0 0 48 48"><path d="M29 7a9 9 0 0 0-9.6 11.8L7 31.2a4 4 0 1 0 5.7 5.7L25.2 24.4A9 9 0 0 0 37 14.8l-5.4 5.4-5.6-1.6-1.6-5.6z"/></svg><h3>Szerszámok</h3><p>Kézi és gépi szerszámok, mérőeszközök, segédeszközök.</p></article>
+   <article class="cat reveal"><span class="n">03</span><svg viewBox="0 0 48 48"><path d="M17 6h14l6 8-6 8H17l-6-8zM24 22v20M19 28h10M19 34h10"/></svg><h3>Csavarok, kötőelemek</h3><p>Csavarok, anyák, alátétek, szegek, szegecsek, dübelek.</p></article>
+   <article class="cat reveal"><span class="n">04</span><svg viewBox="0 0 48 48"><path d="M6 18h16v12H6zM22 21h8a8 8 0 0 1 8 8v13M34 42h8M26 21V12h8"/></svg><h3>Csövek és idomok</h3><p>Menetes acélcsövek, idomok, szelepek és tömlők.</p></article>
+   <article class="cat reveal"><span class="n">05</span><svg viewBox="0 0 48 48"><path d="M24 6c6 8 11 13 11 21a11 11 0 0 1-22 0c0-5 3-8 5-11 1 4 3 6 6 6-2-6-1-11 0-16z"/></svg><h3>Hegesztés</h3><p>Elektródák, huzalok, védőgázok és hegesztési kellékek.</p></article>
+   <article class="cat reveal"><span class="n">06</span><svg viewBox="0 0 48 48"><path d="M8 10h26v10H8zM34 15h6v10H22v6M19 31h6v11h-6z"/></svg><h3>Festékek, vegyszerek</h3><p>Alapozók, fedőfestékek, rozsdagátlók, hígítók, aeroszolok.</p></article>
+   <article class="cat reveal"><span class="n">07</span><svg viewBox="0 0 48 48"><path d="M27 4 11 27h12l-3 17 17-24H25z"/></svg><h3>Elektromos anyagok</h3><p>Kábelek, szerelvények, biztosítékok és kábelcsatornák.</p></article>
+   <article class="cat reveal"><span class="n">08</span><svg viewBox="0 0 48 48"><path d="M6 42h36M10 42V22h12v20M26 42V12h12v30M10 28h12M10 34h12M26 18h12M26 24h12M26 30h12M26 36h12"/></svg><h3>Építőanyagok</h3><p>Falazóelemek, szigetelők, ragasztók és tömítések.</p></article>
+  </div>
+ </div>
+</section>
+
+<section class="brands" id="markak">
+ <div class="wrap head reveal">
+  <div><div class="kicker">Márkák</div><h2>Akikben megbízunk</h2></div>
+  <p>A profi gyártóktól a megbízható hétköznapi márkákig – minden árkategóriában.</p>
+ </div>
+ <div class="fade"><div class="marq" id="m1"></div><div class="marq rev" id="m2"></div></div>
+</section>
+
+<section id="rolunk">
+ <div class="wrap why">
+  <div class="why-art reveal"><div class="plate"></div><div class="big">VAS</div><div class="tag">TiszaVas Kereskedés · Tiszavasvári</div></div>
+  <div class="reveal">
+   <div class="kicker">Miért mi</div>
+   <h2>Helyi bolt, profi kínálat</h2>
+   <div class="points">
+    <div class="pt"><i>01</i><div><h3>Szakértő tanács</h3><p>Megmondjuk, mi kell a munkához – nem azt adjuk el, ami a legdrágább.</p></div></div>
+    <div class="pt"><i>02</i><div><h3>Széles választék</h3><p>Vasanyagtól a szerszámgépekig, több mint 45 márka egy helyen.</p></div></div>
+    <div class="pt"><i>03</i><div><h3>Gyors beszerzés</h3><p>Amit nem tartunk készleten, azt rövid határidővel megrendeljük.</p></div></div>
+   </div>
+  </div>
+ </div>
+</section>
+
+<section id="kapcsolat" style="padding-top:40px">
+ <div class="wrap">
+  <div class="head reveal"><div><div class="kicker">Kapcsolat</div><h2>Elérhetőségek</h2></div></div>
+  <div class="contact">
+   <div class="card reveal">
+    <h3><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Nyitvatartás</h3>
+    <ul class="hours" id="hours"></ul>
+   </div>
+   <div class="map reveal"><iframe loading="lazy" title="TiszaVas Kereskedés térkép" src="https://maps.google.com/maps?q=TiszaVas%20Keresked%C3%A9s%2C%20Tiszavasv%C3%A1ri&z=15&output=embed"></iframe></div>
+   <div class="card reveal">
+    <h3><svg viewBox="0 0 24 24"><path d="M4 4h16v16H4z"/><path d="m4 6 8 7 8-7"/></svg>Írjon, hívjon</h3>
+    <div class="links">
+     <a href="tel:+36707736427"><svg viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>70/773 64 27</a>
+     <a href="mailto:tiszavas@hotmail.com"><svg viewBox="0 0 24 24"><path d="M4 4h16v16H4z"/><path d="m4 6 8 7 8-7"/></svg>tiszavas@hotmail.com</a>
+     <a href="https://www.facebook.com/search/top?q=TiszaVas%20Keresked%C3%A9s" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M15 3h-2a4 4 0 0 0-4 4v3H7v4h2v7h4v-7h3l1-4h-4V7a1 1 0 0 1 1-1h2z"/></svg>Facebook</a>
+     <a href="https://www.google.com/maps/dir/?api=1&destination=TiszaVas%20Keresked%C3%A9s%2C%20Tiszavasv%C3%A1ri" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M12 22s7-6.2 7-12a7 7 0 1 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg>Útvonaltervezés</a>
+    </div>
+   </div>
+  </div>
+ </div>
+</section>
+
+<footer>
+ <div class="wrap">
+  <span class="brand" style="font-size:22px">TISZA<b>VAS</b> <span style="color:var(--steel)">KERESKEDÉS</span></span>
+  <span>70/773 64 27 · tiszavas@hotmail.com · © <span id="y"></span> TiszaVas</span>
+ </div>
+</footer>
+
+<div class="dock">
+ <a href="tel:+36707736427"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>Hívás</a>
+ <a href="https://www.google.com/maps/dir/?api=1&destination=TiszaVas%20Keresked%C3%A9s%2C%20Tiszavasv%C3%A1ri" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s7-6.2 7-12a7 7 0 1 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg>Útvonal</a>
+</div>
+
+<script>
+// opening hours: [day index 0=Sunday, label, open, close]
+const H=[[1,'Hétfő','08:00','17:00'],[2,'Kedd','08:00','17:00'],[3,'Szerda','08:00','17:00'],[4,'Csütörtök','08:00','17:00'],[5,'Péntek','08:00','17:00'],[6,'Szombat','08:00','12:00'],[0,'Vasárnap',null,null]];
+const now=new Date(new Date().toLocaleString('en-US',{timeZone:'Europe/Budapest'}));
+const d=now.getDay(),mins=now.getHours()*60+now.getMinutes(),m=t=>+t.slice(0,2)*60+ +t.slice(3);
+document.getElementById('hours').innerHTML=H.map(([i,n,o,c])=>`<li class="${i===d?'today':''}"><span>${n}</span><b>${o?o+' – '+c:'Zárva'}</b></li>`).join('');
+const t=H.find(h=>h[0]===d),st=document.getElementById('status'),tx=document.getElementById('status-t');
+if(t[2]&&mins>=m(t[2])&&mins<m(t[3])){st.classList.add('open');tx.textContent='Most nyitva · '+t[3]+'-ig'}
+else{st.classList.add('closed');let k=1,nx;while(k<8){nx=H.find(h=>h[0]===(d+k)%7);if(nx[2])break;k++}
+ const today=t[2]&&mins<m(t[2]);tx.textContent='Zárva · nyit '+(today?'ma '+t[2]:(k===1?'holnap ':nx[1].toLowerCase()+' ')+nx[2])}
+document.getElementById('y').textContent=now.getFullYear();
+
+// brand marquee
+const B='modeco toptools decocolor tradeforce berner berger coverguard crater dewalt esab euroelzett flexovit hoteche wtools legrand rawlplug wago wiha yato abus chromos united drschenk einhell entac extol festa hans herman hikoki maxell kendo koelner anbo finder stanley neo verto topex bosch tkk dedra metabo portwest sola strendpro'.split(' ');
+const tile=n=>`<div class="tile"><img src="brands/${n}.webp" alt="${n}" loading="lazy"></div>`;
+const half=Math.ceil(B.length/2),a=B.slice(0,half),b=B.slice(half);
+document.getElementById('m1').innerHTML=(a.map(tile).join('')).repeat(2);
+document.getElementById('m2').innerHTML=(b.map(tile).join('')).repeat(2);
+
+// header + reveal
+const hdr=document.getElementById('top');addEventListener('scroll',()=>hdr.classList.toggle('solid',scrollY>40),{passive:true});
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach((el,i)=>{el.style.transitionDelay=(i%4)*70+'ms';io.observe(el)});
+
+// welding sparks in the hero
+const cv=document.getElementById('sparks'),cx=cv.getContext('2d');let W,Hh,P=[];
+const rs=()=>{W=cv.width=cv.offsetWidth*devicePixelRatio;Hh=cv.height=cv.offsetHeight*devicePixelRatio};rs();addEventListener('resize',rs);
+if(!matchMedia('(prefers-reduced-motion: reduce)').matches)(function f(){
+ if(P.length<90)for(let i=0;i<3;i++)P.push({x:W*(.2+Math.random()*.6),y:Hh*1.02,vx:(Math.random()-.5)*2.2,vy:-(2+Math.random()*4.5),l:1});
+ cx.clearRect(0,0,W,Hh);cx.globalCompositeOperation='lighter';
+ P=P.filter(p=>(p.x+=p.vx,p.y+=p.vy,p.vy+=.035,p.l-=.007,p.l>0));
+ for(const p of P){cx.strokeStyle=`rgba(255,${120+120*p.l|0},60,${p.l*.7})`;cx.lineWidth=1.6*devicePixelRatio;cx.beginPath();cx.moveTo(p.x,p.y);cx.lineTo(p.x-p.vx*3,p.y-p.vy*3);cx.stroke()}
+ requestAnimationFrame(f)})();
+</script>
+</body>
+</html>
