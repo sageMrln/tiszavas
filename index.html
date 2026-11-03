@@ -399,7 +399,8 @@ document.getElementById('m2').innerHTML=(b.map(tile).join('')).repeat(2);
 // today's hours in the info bar
 document.getElementById('info-h').textContent='Ma: '+(t[2]?t[2]+' – '+t[3]:'zárva');
 // search over categories and brands
-const CATS=[...document.querySelectorAll('.cat')].map(c=>({n:c.querySelector('h3').textContent,d:c.querySelector('p').textContent,el:c}));
+const KW=['zartszelveny zártszelvény laposvas szogvas szögvas betonacel betonacél idomacel cso lemez profil kortvas köracél','flex sarokcsiszolo sarokcsiszoló furo fúró csavarbehajto kalapacs kalapács fogo fogó villaskulcs meroszalag mérőszalag vizmerték vizmerteg korfuresz körfűrész','csavar anya alatet alátét szeg szegecs dubel dübel menetes szar tipli','cso cső idom szelep tomlo tömlő karmantyu karmantyú konyok könyök','hegeszto hegesztő elektroda elektróda huzal pajzs pálca palca maszk','festek festék alapozo alapozó rozsdagatlo rozsdagátló higito hígító spray aerosol lakk','kabel kábel konnektor kapcsolo kapcsoló biztositek biztosíték ledes led','tegla tégla szigeteles szigetelés ragaszto ragasztó szilikon habarcs cement'];
+const CATS=[...document.querySelectorAll('.cat')].map((c,i)=>({n:c.querySelector('h3').textContent,d:c.querySelector('p').textContent+' '+KW[i],el:c}));
 const fold=x=>x.normalize('NFD').replace(/[̀-ͯ]/g,'').toLowerCase();
 const q=document.getElementById('q'),res=document.getElementById('results');
 q.oninput=()=>{const v=fold(q.value.trim());if(v.length<2){res.classList.remove('show');return}
