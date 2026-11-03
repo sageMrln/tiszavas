@@ -7,16 +7,16 @@
 <meta name="description" content="TiszaVas Kereskedés Tiszavasváriban: vas- és acéltermékek, szerszámok, csavarok, csövek, hegesztés, festékek, elektromos anyagok és építőanyagok. Több mint 45 márka egy helyen.">
 <meta property="og:title" content="TiszaVas Kereskedés">
 <meta property="og:description" content="Vas, szerszám, építőanyag – egy helyen, Tiszavasváriban.">
-<meta property="og:image" content="logo.webp">
+<meta property="og:image" content="https://sagemrln.github.io/tiszavas/logo.webp">
 <meta name="theme-color" content="#0b0b0c">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,600;0,800;1,800&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#0b0b0c;--bg2:#121214;--line:#232326;--steel:#c9ccd1;--mute:#8b8f96;--red:#e3202b;--red2:#ff3b45;--r:14px}
+:root{--bg:#0b0b0c;--bg2:#121214;--line:#2e2e33;--steel:#dfe1e5;--mute:#b6bac1;--red:#e3202b;--red2:#ff3b45;--r:14px}
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
-body{background:var(--bg);color:#eceef1;font:16px/1.6 Barlow,system-ui,sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+body{background:var(--bg);color:#eceef1;font:18px/1.55 Barlow,system-ui,sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden}
 a{color:inherit;text-decoration:none}
 img{display:block;max-width:100%}
 .wrap{width:min(1180px,92vw);margin:auto}
@@ -27,32 +27,32 @@ h1,h2,h3,.cond{font-family:"Barlow Condensed",sans-serif;text-transform:uppercas
  linear-gradient(45deg,transparent 46%,rgba(255,255,255,.07) 48%,rgba(255,255,255,.16) 50%,rgba(0,0,0,.35) 52%,transparent 54%);
  background-size:26px 14px,26px 14px;background-position:0 0,13px 7px}
 
-.mk-plate.plate{background-color:#8f939a;background-size:18px 10px,18px 10px;background-position:0 0,9px 5px}
 /* top bar */
 .top{position:fixed;inset:0 0 auto;z-index:50;transition:background .3s,border-color .3s;border-bottom:1px solid transparent}
 .top.solid{background:rgba(11,11,12,.86);backdrop-filter:blur(14px);border-color:var(--line)}
 .top .wrap{display:flex;align-items:center;gap:22px;height:68px}
 .brand{font:800 26px/1 "Barlow Condensed";letter-spacing:.01em}
 .brand b{color:var(--red)}
-.nav{display:flex;gap:26px;margin-left:auto;font-weight:600;font-size:14px;letter-spacing:.06em;text-transform:uppercase;color:var(--steel)}
+.nav{display:flex;gap:26px;margin-left:auto;font-weight:600;font-size:17px;color:var(--steel)}
 .nav a:hover{color:#fff}
-.status{display:flex;align-items:center;gap:8px;font-size:13px;font-weight:600;padding:7px 12px;border:1px solid var(--line);border-radius:99px;background:#111;white-space:nowrap}
+.status{display:flex;align-items:center;gap:8px;font-size:14px;font-weight:600;padding:7px 12px;border:1px solid var(--line);border-radius:99px;background:#111;white-space:nowrap}
 .dot{width:8px;height:8px;border-radius:50%;background:#555}
 .open .dot{background:#2fd160;box-shadow:0 0 0 0 rgba(47,209,96,.6);animation:ping 1.8s infinite}
 .closed .dot{background:var(--red)}
 @keyframes ping{70%{box-shadow:0 0 0 9px rgba(47,209,96,0)}100%{box-shadow:0 0 0 0 rgba(47,209,96,0)}}
 
-.burger{display:none;width:44px;height:44px;border-radius:12px;border:1px solid var(--line);background:#111;cursor:pointer;flex-direction:column;justify-content:center;align-items:center;gap:6px}
+.burger{display:none;width:56px;height:50px;border-radius:12px;border:1px solid #3a3b40;background:#111;cursor:pointer;flex-direction:column;justify-content:center;align-items:center;gap:5px}
+.burger::after{content:"Menü";font:600 12px/1 Barlow;color:#fff;margin-top:1px}
 .burger span{width:18px;height:2px;background:#fff;transition:transform .3s}
 body.nav-open .burger span:first-child{transform:translateY(4px) rotate(45deg)}
 body.nav-open .burger span:last-child{transform:translateY(-4px) rotate(-45deg)}
-.menu{position:fixed;inset:0;z-index:45;background:rgba(8,8,9,.97);display:flex;flex-direction:column;justify-content:center;align-items:center;gap:8px;opacity:0;pointer-events:none;transition:opacity .3s}
-.menu a:not(.btn){font:800 44px/1.25 "Barlow Condensed";text-transform:uppercase}
+.menu{position:fixed;inset:0;z-index:45;background:var(--bg);display:flex;flex-direction:column;justify-content:center;align-items:center;gap:8px;opacity:0;pointer-events:none;transition:opacity .3s}
+.menu a:not(.btn){font:600 30px/1.2 Barlow;padding:12px 24px}
 .menu a:not(.btn):active{color:var(--red)}
 .menu .btn{margin-top:26px}
 body.nav-open .menu{opacity:1;pointer-events:auto}
 body.nav-open{overflow:hidden}
-.info{position:fixed;inset:0 0 auto;z-index:51;height:34px;background:#070708;border-bottom:1px solid var(--line);font-size:13px;color:var(--mute)}
+.info{position:fixed;inset:0 0 auto;z-index:51;height:34px;background:#070708;border-bottom:1px solid var(--line);font-size:15px;color:var(--mute)}
 .info .wrap{display:flex;gap:26px;align-items:center;height:100%}
 .info a:hover{color:#fff}.info .sp{flex:1}
 .info a[href="#ajanlat"]{color:var(--red);font-weight:600}
@@ -60,109 +60,64 @@ body.nav-open{overflow:hidden}
 .search{position:relative;width:min(560px,92vw)}
 .search svg{position:absolute;z-index:1;left:18px;top:50%;translate:0 -50%;width:20px;height:20px;stroke:var(--mute);fill:none;stroke-width:2}
 .search input{width:100%;padding:17px 18px 17px 50px;border-radius:14px;border:1px solid #34353a;background:rgba(18,18,20,.85);backdrop-filter:blur(8px);color:#fff;font:500 16px Barlow;outline:none;transition:border-color .2s,box-shadow .2s}
+.search input::placeholder{color:#a6aab1;opacity:1}
 .search input:focus{border-color:var(--red);box-shadow:0 0 0 4px rgba(227,32,43,.18)}
 .results{position:absolute;left:0;right:0;top:calc(100% + 8px);background:#141416;border:1px solid #2a2b30;border-radius:14px;overflow:hidden;text-align:left;display:none;z-index:5;box-shadow:0 20px 50px rgba(0,0,0,.6)}
 .results.show{display:block}
-.results a{display:flex;justify-content:space-between;gap:12px;padding:13px 18px;border-top:1px solid #1f1f23;font-size:15px}
+.results a{display:flex;justify-content:space-between;gap:12px;padding:14px 18px;border-top:1px solid #1f1f23;font-size:18px}
 .results a:first-child{border-top:0}
 .results a:hover{background:#1c0d0e}
 .results small{color:var(--mute)}
 .svc{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
-.sv{padding:26px;border-radius:var(--r);border:1px solid var(--line);background:var(--bg2);border-left:3px solid var(--red)}
+.sv{padding:22px;border-radius:var(--r);border:1px solid var(--line);background:var(--bg2)}
 .sv b{display:block;font:800 22px "Barlow Condensed";text-transform:uppercase;margin-bottom:8px}
-.sv p{color:var(--mute);font-size:15px}
-.quote{display:grid;grid-template-columns:1fr 1.1fr;gap:50px;padding:46px;border-radius:22px;border:1px solid #3a1518;background:radial-gradient(80% 120% at 0% 0%,rgba(227,32,43,.16),transparent 60%),var(--bg2)}
+.sv p{color:var(--mute);font-size:17px}
+.quote{display:grid;grid-template-columns:1fr 1.1fr;gap:50px;padding:40px;border-radius:var(--r);border:1px solid var(--line);background:var(--bg2)}
 .qp{color:var(--steel);margin-top:18px;max-width:44ch}
 #qform{display:grid;gap:12px}
 #qform .row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-#qform input,#qform textarea{width:100%;padding:15px 16px;border-radius:12px;border:1px solid #2e2f34;background:#0d0d0f;color:#fff;font:500 15px Barlow;outline:none;resize:vertical}
+#qform label{display:grid;gap:6px;font-weight:600}
+#qform input,#qform textarea{width:100%;padding:15px 16px;border-radius:12px;border:1px solid #4a4b52;background:#0d0d0f;color:#fff;font:500 18px Barlow;outline:none;resize:vertical}
 #qform input:focus,#qform textarea:focus{border-color:var(--red)}
 #qform .btn{justify-content:center;border:0;cursor:pointer;font:600 16px Barlow;color:#fff}
-#qform small{color:var(--mute)}
+#qform small{color:var(--mute);font-size:16px}
+#qform small a{color:#fff;font-weight:600;white-space:nowrap}
 /* hero */
-.hero{position:relative;min-height:100svh;display:grid;place-items:center;padding:120px 0 80px;isolation:isolate;overflow:hidden}
-.hero::before{content:"";position:absolute;inset:0;z-index:-2;background:radial-gradient(60% 50% at 50% 38%,rgba(227,32,43,.28),transparent 70%),radial-gradient(90% 70% at 50% 120%,#000,transparent),var(--bg)}
-.hero>.plate{position:absolute;inset:auto 0 0;height:34%;z-index:-1;-webkit-mask:linear-gradient(transparent,#000 70%);mask:linear-gradient(transparent,#000 70%);opacity:.75}
-.sparks{position:absolute;inset:0;width:100%;height:100%;z-index:-1;pointer-events:none}
-.hero-in{text-align:center;display:grid;justify-items:center;gap:24px}
-.mark{width:min(470px,88vw);animation:rise 1s cubic-bezier(.2,.8,.2,1) both;filter:drop-shadow(0 24px 50px rgba(227,32,43,.35))}
-@keyframes rise{from{opacity:0;transform:translateY(24px)}}
-.mk-top{display:flex;justify-content:center;align-items:flex-end;font:italic 800 clamp(64px,15vw,112px)/.82 "Barlow Condensed";letter-spacing:-.01em;padding:0 4%;position:relative}
-.mk-top::before{content:"";position:absolute;left:4%;right:30%;top:-.06em;height:.12em;background:var(--red);transform:skewX(-18deg)}
-.mk-t{color:#e9eaee;padding-top:.14em}
-.mk-v{color:var(--red);font-size:1.18em;letter-spacing:.02em;text-shadow:0 0 30px rgba(227,32,43,.45)}
-.mk-plate{margin-top:.5em;border-radius:6px;padding:.32em 0 .38em;text-align:center;font-size:clamp(26px,6.2vw,40px);box-shadow:inset 0 1px 0 rgba(255,255,255,.25),inset 0 -2px 0 rgba(0,0,0,.5);background-color:#9a9ea5}
-.mk-plate span{font:italic 800 1em/1 "Barlow Condensed";letter-spacing:.22em;color:var(--red);-webkit-text-stroke:.035em #111;paint-order:stroke fill;text-shadow:0 .05em 0 #111;padding-left:.22em}
-.hero h1{font-size:clamp(40px,6.4vw,70px);font-weight:800;max-width:14ch}
-.hero h1 em{font-style:italic;color:var(--red);text-shadow:0 0 40px rgba(227,32,43,.5)}
-.hero p{color:var(--steel);font-size:clamp(16px,2vw,19px);max-width:52ch}
+.hero{position:relative;display:grid;place-items:center;padding:134px 0 56px;isolation:isolate;overflow:hidden}
+.hero::before{content:"";position:absolute;inset:0;z-index:-2;background:radial-gradient(60% 50% at 50% 38%,rgba(227,32,43,.15),transparent 72%),radial-gradient(90% 70% at 50% 120%,#000,transparent),var(--bg)}
+.hero-in{text-align:center;display:grid;justify-items:center;gap:20px}
+.logo{width:min(600px,88vw);height:auto;filter:drop-shadow(0 12px 28px rgba(0,0,0,.55))}
+.hero h1{font-size:clamp(36px,5vw,56px);font-weight:800;text-wrap:balance}
+.hero h1 em{font-style:normal;color:var(--red2)}
+.hero p{color:var(--steel);font-size:20px;max-width:46ch}
 .ctas{display:flex;gap:14px;flex-wrap:wrap;justify-content:center}
-.btn{display:inline-flex;align-items:center;gap:10px;padding:16px 26px;border-radius:12px;font-weight:600;letter-spacing:.03em;transition:transform .2s,box-shadow .2s,background .2s}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:16px 26px;border-radius:12px;font-weight:600;transition:background .2s,border-color .2s}
 .btn svg{width:20px;height:20px}
-.btn-red{background:var(--red);box-shadow:0 12px 30px -10px rgba(227,32,43,.8)}
-.btn-red:hover{background:var(--red2);transform:translateY(-2px)}
+.btn-red{background:var(--red)}
+.btn-red:hover{background:#c81a24}
 .btn-ghost{border:1px solid #3a3b40;background:rgba(255,255,255,.03)}
-.btn-ghost:hover{border-color:#777;transform:translateY(-2px)}
-.scroll{position:absolute;bottom:26px;left:50%;translate:-50%;width:24px;height:38px;border:2px solid #444;border-radius:12px}
-.scroll::after{content:"";position:absolute;left:50%;top:7px;width:4px;height:8px;margin-left:-2px;border-radius:2px;background:var(--red);animation:sc 1.6s infinite}
-@keyframes sc{to{transform:translateY(12px);opacity:0}}
+.btn-ghost:hover{border-color:#777}
 
 /* stats */
-.stats{border-block:1px solid var(--line);background:var(--bg2)}
-.stats .wrap{display:grid;grid-template-columns:repeat(4,1fr)}
-.stat{padding:30px 20px;border-left:1px solid var(--line)}
-.stat:first-child{border-left:0}
-.stat b{display:block;font:800 44px/1 "Barlow Condensed";color:#fff}
-.stat b i{color:var(--red);font-style:normal}
-.stat span{color:var(--mute);font-size:14px}
 
-section{padding:110px 0}
-.head{display:flex;align-items:end;justify-content:space-between;gap:30px;margin-bottom:50px;flex-wrap:wrap}
-.kicker{color:var(--red);font:700 13px/1 Barlow;letter-spacing:.24em;text-transform:uppercase;margin-bottom:14px;display:flex;align-items:center;gap:10px}
-.kicker::before{content:"";width:28px;height:2px;background:var(--red)}
-h2{font-size:clamp(38px,5.4vw,64px);font-weight:800}
-.head p{color:var(--mute);max-width:42ch}
+section{padding:72px 0}
+.head{margin-bottom:30px}
+.head p{color:var(--mute);max-width:60ch;margin-top:12px}
+h2{font-size:clamp(34px,4vw,46px);font-weight:800}
 
 /* categories */
 .cats{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
-.cat{position:relative;padding:30px 26px 28px;border:1px solid var(--line);border-radius:var(--r);background:linear-gradient(180deg,#141416,#0e0e10);overflow:hidden;transition:transform .35s cubic-bezier(.2,.8,.2,1),border-color .35s}
-.cat::after{content:"";position:absolute;inset:auto -40% -60% -40%;height:120%;background:radial-gradient(closest-side,rgba(227,32,43,.22),transparent);opacity:0;transition:opacity .4s}
-.cat:hover{transform:translateY(-6px);border-color:#4a1a1d}
-.cat:hover::after{opacity:1}
-.cat svg{width:44px;height:44px;stroke:var(--red);stroke-width:1.7;fill:none;stroke-linecap:round;stroke-linejoin:round;margin-bottom:22px}
-.cat h3{font-size:22px;margin-bottom:10px}
-.cat p{color:var(--mute);font-size:14.5px;line-height:1.55}
-.cat{cursor:pointer}
-.cat .more{display:grid;grid-template-rows:0fr;transition:grid-template-rows .4s}
-.cat .more>div{overflow:hidden}
-.cat.open .more{grid-template-rows:1fr}
-.cat .more a{display:inline-flex;margin-top:16px;padding:10px 14px;border-radius:10px;background:var(--red);font-weight:600;font-size:14px}
-.cat .plus{position:absolute;right:22px;bottom:22px;width:26px;height:26px;border-radius:50%;border:1px solid #3a3b40;display:grid;place-items:center;color:var(--red);font-weight:600;transition:transform .3s}
-.cat.open .plus{transform:rotate(45deg)}
-.cat .n{position:absolute;top:22px;right:24px;font:800 15px "Barlow Condensed";color:#333}
+.cat{display:flex;flex-direction:column;padding:20px;border:1px solid var(--line);border-radius:var(--r);background:var(--bg2);transition:border-color .2s}
+.cat:hover,.cat.hit{border-color:var(--red)}
+.cat .go{margin-top:auto;padding-top:12px;color:var(--red2);font-weight:600}
+.cat svg{width:38px;height:38px;stroke:var(--red);stroke-width:1.7;fill:none;stroke-linecap:round;stroke-linejoin:round;margin-bottom:12px}
+.cat h3{font-size:24px;margin-bottom:6px}
+.cat p{color:var(--mute);font-size:16.5px;line-height:1.45}
 
 /* brands */
 .brands{background:var(--bg2);border-block:1px solid var(--line);overflow:hidden}
-.marq{display:flex;gap:18px;width:max-content;animation:mq 60s linear infinite}
-.marq.rev{animation-direction:reverse;margin-top:18px}
-.brands:hover .marq{animation-play-state:paused}
-@keyframes mq{to{transform:translateX(-50%)}}
-.tile{width:190px;height:96px;flex:none;display:grid;place-items:center;padding:14px 20px;background:#fff;border-radius:12px;filter:grayscale(1) contrast(1.05);opacity:.78;transition:filter .3s,opacity .3s,transform .3s}
-.tile:hover{filter:none;opacity:1;transform:scale(1.05)}
-.tile img{max-height:62px;object-fit:contain}
-.fade{-webkit-mask:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);mask:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}
 
 /* why */
-.why{display:grid;grid-template-columns:1.1fr 1fr;gap:60px;align-items:center}
-.why-art{position:relative;aspect-ratio:4/3.4;border-radius:20px;overflow:hidden;border:1px solid var(--line)}
-.why-art .plate{position:absolute;inset:0}
-.why-art .big{position:absolute;inset:0;display:grid;place-items:center;font:italic 800 clamp(90px,14vw,190px)/1 "Barlow Condensed";color:transparent;-webkit-text-stroke:2px rgba(227,32,43,.9);text-shadow:0 0 60px rgba(227,32,43,.35)}
-.why-art .tag{position:absolute;left:22px;bottom:22px;padding:10px 14px;background:rgba(0,0,0,.7);backdrop-filter:blur(6px);border-radius:10px;font-weight:600;font-size:14px;border:1px solid #333}
-.points{display:grid;gap:26px;margin-top:34px}
-.pt{display:grid;grid-template-columns:52px 1fr;gap:18px}
-.pt i{width:52px;height:52px;border-radius:12px;display:grid;place-items:center;background:#1a0b0c;border:1px solid #3d1416;font:800 20px "Barlow Condensed";color:var(--red);font-style:normal}
-.pt h3{font-size:22px;margin-bottom:6px}
-.pt p{color:var(--mute)}
 
 /* contact */
 .contact{display:grid;grid-template-columns:340px 1fr 300px;gap:18px}
@@ -175,25 +130,42 @@ h2{font-size:clamp(38px,5.4vw,64px);font-weight:800}
 .hours li.today{color:#fff}
 .hours li.today span::after{content:"ma";margin-left:8px;font-size:11px;padding:2px 7px;border-radius:99px;background:var(--red);color:#fff;font-weight:600;letter-spacing:.05em;vertical-align:2px}
 .map{border-radius:var(--r);overflow:hidden;border:1px solid var(--line);min-height:380px;position:relative}
-.map iframe{position:absolute;inset:0;width:100%;height:100%;border:0;filter:invert(.92) hue-rotate(180deg) saturate(.6) brightness(.95)}
 .links{display:grid;gap:10px}
-.links a{display:flex;align-items:center;gap:12px;padding:14px 16px;border:1px solid #26262a;border-radius:10px;background:#0e0e10;font-weight:600;font-size:15px;transition:border-color .2s,background .2s}
+.links a{display:flex;align-items:center;gap:12px;padding:15px 16px;border:1px solid #3a3b40;border-radius:10px;background:#0e0e10;font-weight:600;font-size:18px;transition:border-color .2s,background .2s}
 .links a:hover{border-color:var(--red);background:#160c0d}
 .links svg{width:19px;height:19px;stroke:var(--red);fill:none;stroke-width:2;flex:none}
 
-footer{border-top:1px solid var(--line);padding:46px 0 120px;color:var(--mute);font-size:14px}
+footer{border-top:1px solid var(--line);padding:36px 0 110px;color:var(--mute);font-size:16px}
 footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;align-items:center}
+
+/* quick answers under the hero */
+.strip{border-block:1px solid var(--line);background:var(--bg2)}
+.strip .wrap{display:grid;grid-template-columns:repeat(3,1fr)}
+.strip a{display:block;padding:20px;border-left:1px solid var(--line)}
+.strip a:first-child{border-left:0}
+.strip a:hover b{color:var(--red2)}
+.strip span{display:block;color:var(--mute);font-size:16px}
+.strip b{font-weight:600;font-size:21px}
+.points{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.pt h3{font-size:24px;margin-bottom:6px}
+.pt p{color:var(--mute);font-size:17px}
+.logos{display:grid;grid-template-columns:repeat(6,1fr);gap:12px}
+.tile{height:84px;display:grid;place-items:center;padding:12px 16px;background:#fff;border-radius:10px}
+.tile img{max-height:58px;object-fit:contain}
+.all{margin-top:16px}
+.all summary{display:inline-block;cursor:pointer;padding:13px 20px;border:1px solid #3a3b40;border-radius:10px;font-weight:600;list-style:none}
+.all summary::-webkit-details-marker{display:none}
+.all[open] summary{margin-bottom:12px}
 
 /* mobile action bar */
 .dock{display:none}
-.reveal{opacity:0;transform:translateY(28px);transition:opacity .8s cubic-bezier(.2,.8,.2,1),transform .8s cubic-bezier(.2,.8,.2,1)}
-.reveal.in{opacity:1;transform:none}
 
 @media (max-width:980px){
  .cats{grid-template-columns:repeat(2,1fr)}
+ .logos{grid-template-columns:repeat(4,1fr)}
+ .points{grid-template-columns:1fr}
  .contact{grid-template-columns:1fr}
  .map{min-height:320px}
- .why{grid-template-columns:1fr}
  .nav{display:none}
  .info{display:none}
  .top{top:0}
@@ -201,26 +173,29 @@ footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;
  .quote{grid-template-columns:1fr;padding:28px;gap:26px}
  .status{margin-left:auto}
  .burger{display:flex}
- .stats .wrap{grid-template-columns:repeat(2,1fr)}
- .stat:nth-child(3){border-left:0}
- .stat{border-top:1px solid var(--line)}
- .stat:nth-child(-n+2){border-top:0}
 }
 @media (max-width:560px){
- section{padding:80px 0}
- .cats{grid-template-columns:1fr}
+ section{padding:48px 0}
+ .hero{padding:96px 0 30px}
+ .ctas{display:none}
+ .strip .wrap{grid-template-columns:1fr}
+ .strip a{border-left:0;border-top:1px solid var(--line);padding:14px 0}
+ .strip a:first-child{border-top:0}
+ .logos{grid-template-columns:repeat(3,1fr);gap:8px}
+ .tile{height:66px;padding:8px 10px}
+ .tile img{max-height:46px}
+ .cat{padding:16px}
+ .cat h3{font-size:22px}
  .svc{grid-template-columns:1fr}
  #qform .row{grid-template-columns:1fr}
  .brand{font-size:22px}
- .status{font-size:12px;padding:6px 10px}
+ .status{font-size:14px;padding:6px 10px}
  .dock{display:grid;grid-template-columns:1fr 1fr;gap:10px;position:fixed;left:12px;right:12px;bottom:12px;z-index:60}
- .dock a{display:flex;justify-content:center;align-items:center;gap:8px;padding:15px;border-radius:14px;font-weight:600;background:#1b1b1e;border:1px solid #333;box-shadow:0 10px 30px rgba(0,0,0,.6)}
+ .dock a{display:flex;justify-content:center;align-items:center;gap:8px;padding:16px;border-radius:14px;font-weight:600;font-size:20px;background:#1b1b1e;border:1px solid #333;box-shadow:0 10px 30px rgba(0,0,0,.6)}
  .dock a:first-child{background:var(--red);border-color:var(--red)}
  .dock svg{width:18px;height:18px}
- .scroll{display:none}
- .tile{width:150px;height:80px}
 }
-@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
 </style>
 </head>
 <body>
@@ -237,23 +212,18 @@ footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;
  </div>
 </header>
 <nav class="menu" id="menu">
- <a href="#termekek">Termékek</a><a href="#markak">Márkák</a><a href="#szolgaltatasok">Szolgáltatások</a><a href="#ajanlat">Ajánlatkérés</a><a href="#kapcsolat">Kapcsolat</a>
+ <a href="#termekek">Termékek</a><a href="#markak">Márkák</a><a href="#szolgaltatasok">Szolgáltatások</a><a href="#ajanlat">Ajánlatkérés</a><a href="#kapcsolat">Nyitvatartás és térkép</a>
  <a class="btn btn-red" href="tel:+36707736427">Hívás: 70/773 64 27</a>
 </nav>
 
 <section class="hero">
- <canvas class="sparks" id="sparks"></canvas>
- <div class="plate"></div>
  <div class="wrap hero-in">
-  <div class="mark" role="img" aria-label="TiszaVas Kereskedés">
-   <div class="mk-top"><span class="mk-t">Tisza</span><span class="mk-v">VAS</span></div>
-   <div class="mk-plate plate"><span>kereskedés</span></div>
-  </div>
-  <h1>Vas, szerszám, <em>építőanyag</em> – egy helyen.</h1>
-  <p>Acéltól a csavarig, festéktől a hegesztőpálcáig: minden, ami a műhelybe, az építkezésre és a házkörüli munkákhoz kell – szakértő tanácsadással, Tiszavasváriban.</p>
+  <img class="logo" src="logo-hero.webp" alt="TiszaVas Kereskedés logó" width="1417" height="505">
+  <h1>Vas, szerszám, <em>építőanyag</em><br>egy helyen.</h1>
+  <p>Acéltól a csavarig, festéktől a hegesztőpálcáig. Helyi bolt Tiszavasváriban.</p>
   <form class="search" id="search" role="search" onsubmit="return false">
    <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></svg>
-   <input id="q" type="search" placeholder="Mit keres? pl. zártszelvény, flex, csavar, Bosch…" autocomplete="off" aria-label="Keresés a kínálatban">
+   <input id="q" type="search" placeholder="Mit keres? pl. csavar, flex…" autocomplete="off" aria-label="Keresés a kínálatban">
    <div class="results" id="results"></div>
   </form>
   <div class="ctas">
@@ -261,98 +231,94 @@ footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;
    <a class="btn btn-ghost" href="#kapcsolat"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s7-6.2 7-12a7 7 0 1 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg>Nyitvatartás és térkép</a>
   </div>
  </div>
- <span class="scroll"></span>
 </section>
 
-<div class="stats">
+<div class="strip">
  <div class="wrap">
-  <div class="stat reveal"><b>45<i>+</i></b><span>márka a polcokon</span></div>
-  <div class="stat reveal"><b>8</b><span>termékkör egy boltban</span></div>
-  <div class="stat reveal"><b>6<i>/</i>7</b><span>nap nyitva, szombaton is</span></div>
-  <div class="stat reveal"><b>1</b><span>helyi bolt, Tiszavasváriban</span></div>
+  <a href="tel:+36707736427"><span>Telefon</span><b>70/773 64 27</b></a>
+  <a href="#kapcsolat"><span>Nyitvatartás</span><b id="strip-h"></b></a>
+  <a href="https://www.google.com/maps/dir/?api=1&destination=TiszaVas%20Keresked%C3%A9s%2C%20Tiszavasv%C3%A1ri" target="_blank" rel="noopener"><span>Tiszavasvári</span><b>Útvonaltervezés</b></a>
  </div>
 </div>
 
 <section id="termekek">
  <div class="wrap">
-  <div class="head reveal">
-   <div><div class="kicker">Kínálat</div><h2>Termékkategóriák</h2></div>
+  <div class="head">
+   <div><h2>Termékek</h2></div>
    <p>Ha nincs készleten, rendelésre beszerezzük. Kérdezzen bátran – telefonon is segítünk kiválasztani a megfelelőt.</p>
   </div>
   <div class="cats">
-   <article class="cat reveal"><span class="n">01</span><svg viewBox="0 0 48 48"><path d="M6 14h36v6H6zM10 20v20M38 20v20M6 34h36"/></svg><h3>Vas és acél</h3><p>Szögvasak, laposvasak, acéllemezek, zártszelvények és csövek.</p><div class="more"><div><a href="tel:+36707736427">Kérdezzen rá: 70/773 64 27</a></div></div><span class="plus">+</span></article>
-   <article class="cat reveal"><span class="n">02</span><svg viewBox="0 0 48 48"><path d="M29 7a9 9 0 0 0-9.6 11.8L7 31.2a4 4 0 1 0 5.7 5.7L25.2 24.4A9 9 0 0 0 37 14.8l-5.4 5.4-5.6-1.6-1.6-5.6z"/></svg><h3>Szerszámok</h3><p>Kézi és gépi szerszámok, mérőeszközök, segédeszközök.</p><div class="more"><div><a href="tel:+36707736427">Kérdezzen rá: 70/773 64 27</a></div></div><span class="plus">+</span></article>
-   <article class="cat reveal"><span class="n">03</span><svg viewBox="0 0 48 48"><path d="M17 6h14l6 8-6 8H17l-6-8zM24 22v20M19 28h10M19 34h10"/></svg><h3>Csavarok, kötőelemek</h3><p>Csavarok, anyák, alátétek, szegek, szegecsek, dübelek.</p><div class="more"><div><a href="tel:+36707736427">Kérdezzen rá: 70/773 64 27</a></div></div><span class="plus">+</span></article>
-   <article class="cat reveal"><span class="n">04</span><svg viewBox="0 0 48 48"><path d="M6 18h16v12H6zM22 21h8a8 8 0 0 1 8 8v13M34 42h8M26 21V12h8"/></svg><h3>Csövek és idomok</h3><p>Menetes acélcsövek, idomok, szelepek és tömlők.</p><div class="more"><div><a href="tel:+36707736427">Kérdezzen rá: 70/773 64 27</a></div></div><span class="plus">+</span></article>
-   <article class="cat reveal"><span class="n">05</span><svg viewBox="0 0 48 48"><path d="M24 6c6 8 11 13 11 21a11 11 0 0 1-22 0c0-5 3-8 5-11 1 4 3 6 6 6-2-6-1-11 0-16z"/></svg><h3>Hegesztés</h3><p>Elektródák, huzalok, védőgázok és hegesztési kellékek.</p><div class="more"><div><a href="tel:+36707736427">Kérdezzen rá: 70/773 64 27</a></div></div><span class="plus">+</span></article>
-   <article class="cat reveal"><span class="n">06</span><svg viewBox="0 0 48 48"><path d="M8 10h26v10H8zM34 15h6v10H22v6M19 31h6v11h-6z"/></svg><h3>Festékek, vegyszerek</h3><p>Alapozók, fedőfestékek, rozsdagátlók, hígítók, aeroszolok.</p><div class="more"><div><a href="tel:+36707736427">Kérdezzen rá: 70/773 64 27</a></div></div><span class="plus">+</span></article>
-   <article class="cat reveal"><span class="n">07</span><svg viewBox="0 0 48 48"><path d="M27 4 11 27h12l-3 17 17-24H25z"/></svg><h3>Elektromos anyagok</h3><p>Kábelek, szerelvények, biztosítékok és kábelcsatornák.</p><div class="more"><div><a href="tel:+36707736427">Kérdezzen rá: 70/773 64 27</a></div></div><span class="plus">+</span></article>
-   <article class="cat reveal"><span class="n">08</span><svg viewBox="0 0 48 48"><path d="M6 42h36M10 42V22h12v20M26 42V12h12v30M10 28h12M10 34h12M26 18h12M26 24h12M26 30h12M26 36h12"/></svg><h3>Építőanyagok</h3><p>Falazóelemek, szigetelők, ragasztók és tömítések.</p><div class="more"><div><a href="tel:+36707736427">Kérdezzen rá: 70/773 64 27</a></div></div><span class="plus">+</span></article>
+   <a class="cat" href="#ajanlat" data-c="Vas és acél"><svg viewBox="0 0 48 48"><path d="M6 14h36v6H6zM10 20v20M38 20v20M6 34h36"/></svg><h3>Vas és acél</h3><p>Szögvasak, laposvasak, acéllemezek, zártszelvények és csövek.</p><span class="go">Érdeklődöm ›</span></a>
+   <a class="cat" href="#ajanlat" data-c="Szerszámok"><svg viewBox="0 0 48 48"><path d="M29 7a9 9 0 0 0-9.6 11.8L7 31.2a4 4 0 1 0 5.7 5.7L25.2 24.4A9 9 0 0 0 37 14.8l-5.4 5.4-5.6-1.6-1.6-5.6z"/></svg><h3>Szerszámok</h3><p>Kézi és gépi szerszámok, mérőeszközök, segédeszközök.</p><span class="go">Érdeklődöm ›</span></a>
+   <a class="cat" href="#ajanlat" data-c="Csavarok, kötőelemek"><svg viewBox="0 0 48 48"><path d="M17 6h14l6 8-6 8H17l-6-8zM24 22v20M19 28h10M19 34h10"/></svg><h3>Csavarok, kötőelemek</h3><p>Csavarok, anyák, alátétek, szegek, szegecsek, dübelek.</p><span class="go">Érdeklődöm ›</span></a>
+   <a class="cat" href="#ajanlat" data-c="Csövek és idomok"><svg viewBox="0 0 48 48"><path d="M6 18h16v12H6zM22 21h8a8 8 0 0 1 8 8v13M34 42h8M26 21V12h8"/></svg><h3>Csövek és idomok</h3><p>Menetes acélcsövek, idomok, szelepek és tömlők.</p><span class="go">Érdeklődöm ›</span></a>
+   <a class="cat" href="#ajanlat" data-c="Hegesztés"><svg viewBox="0 0 48 48"><path d="M24 6c6 8 11 13 11 21a11 11 0 0 1-22 0c0-5 3-8 5-11 1 4 3 6 6 6-2-6-1-11 0-16z"/></svg><h3>Hegesztés</h3><p>Elektródák, huzalok, védőgázok és hegesztési kellékek.</p><span class="go">Érdeklődöm ›</span></a>
+   <a class="cat" href="#ajanlat" data-c="Festékek, vegyszerek"><svg viewBox="0 0 48 48"><path d="M8 10h26v10H8zM34 15h6v10H22v6M19 31h6v11h-6z"/></svg><h3>Festékek, vegyszerek</h3><p>Alapozók, fedőfestékek, rozsdagátlók, hígítók, aeroszolok.</p><span class="go">Érdeklődöm ›</span></a>
+   <a class="cat" href="#ajanlat" data-c="Elektromos anyagok"><svg viewBox="0 0 48 48"><path d="M27 4 11 27h12l-3 17 17-24H25z"/></svg><h3>Elektromos anyagok</h3><p>Kábelek, szerelvények, biztosítékok és kábelcsatornák.</p><span class="go">Érdeklődöm ›</span></a>
+   <a class="cat" href="#ajanlat" data-c="Építőanyagok"><svg viewBox="0 0 48 48"><path d="M6 42h36M10 42V22h12v20M26 42V12h12v30M10 28h12M10 34h12M26 18h12M26 24h12M26 30h12M26 36h12"/></svg><h3>Építőanyagok</h3><p>Falazóelemek, szigetelők, ragasztók és tömítések.</p><span class="go">Érdeklődöm ›</span></a>
   </div>
  </div>
 </section>
 
 <section class="brands" id="markak">
- <div class="wrap head reveal">
-  <div><div class="kicker">Márkák</div><h2>Akikben megbízunk</h2></div>
+ <div class="wrap head">
+  <div><h2>Márkák</h2></div>
   <p>A profi gyártóktól a megbízható hétköznapi márkákig – minden árkategóriában.</p>
  </div>
- <div class="fade"><div class="marq" id="m1"></div><div class="marq rev" id="m2"></div></div>
+ <div class="wrap"><div class="logos" id="m1"></div><details class="all"><summary>Az összes márka</summary><div class="logos" id="m2"></div></details></div>
 </section>
 
 <section id="rolunk">
- <div class="wrap why">
-  <div class="why-art reveal"><div class="plate"></div><div class="big">VAS</div><div class="tag">TiszaVas Kereskedés · Tiszavasvári</div></div>
-  <div class="reveal">
-   <div class="kicker">Miért mi</div>
-   <h2>Helyi bolt, profi kínálat</h2>
+ <div class="wrap">
+  <div>
+   <div class="head"><h2>Rólunk</h2></div>
    <div class="points">
-    <div class="pt"><i>01</i><div><h3>Szakértő tanács</h3><p>Megmondjuk, mi kell a munkához – nem azt adjuk el, ami a legdrágább.</p></div></div>
-    <div class="pt"><i>02</i><div><h3>Széles választék</h3><p>Vasanyagtól a szerszámgépekig, több mint 45 márka egy helyen.</p></div></div>
-    <div class="pt"><i>03</i><div><h3>Gyors beszerzés</h3><p>Amit nem tartunk készleten, azt rövid határidővel megrendeljük.</p></div></div>
+    <div class="pt"><div><h3>Szakértő tanács</h3><p>Megmondjuk, mi kell a munkához – nem azt adjuk el, ami a legdrágább.</p></div></div>
+    <div class="pt"><div><h3>Széles választék</h3><p>Vasanyagtól a szerszámgépekig, több mint 45 márka egy helyen.</p></div></div>
+    <div class="pt"><div><h3>Gyors beszerzés</h3><p>Amit nem tartunk készleten, azt rövid határidővel megrendeljük.</p></div></div>
    </div>
   </div>
  </div>
 </section>
 
-<section id="szolgaltatasok" style="padding-top:20px">
+<section id="szolgaltatasok">
  <div class="wrap">
-  <div class="head reveal"><div><div class="kicker">Szolgáltatások</div><h2>Nem csak eladunk</h2></div><p>Amit a nagy áruházak nem adnak meg: személyes kiszolgálás és rugalmasság.</p></div>
+  <div class="head"><div><h2>Szolgáltatások</h2></div><p>Amit a nagy áruházak nem adnak meg: személyes kiszolgálás és rugalmasság.</p></div>
   <div class="svc">
-   <div class="sv reveal"><b>Méretre vágás</b><p>A vasanyagot a kívánt hosszra vágjuk, hogy otthon már csak szerelni kelljen.</p></div>
-   <div class="sv reveal"><b>Rendelésre beszerzés</b><p>Ami nincs a polcon, azt a beszállítóinktól rövid időn belül megrendeljük.</p></div>
-   <div class="sv reveal"><b>Házhozszállítás</b><p>Nagyobb tételeknél egyeztetés alapján kiszállítjuk az árut.</p></div>
-   <div class="sv reveal"><b>Szaktanácsadás</b><p>Elmondja, mit épít – mi megmondjuk, mi kell hozzá és mennyi.</p></div>
+   <div class="sv"><b>Méretre vágás</b><p>A vasanyagot a kívánt hosszra vágjuk, hogy otthon már csak szerelni kelljen.</p></div>
+   <div class="sv"><b>Rendelésre beszerzés</b><p>Ami nincs a polcon, azt a beszállítóinktól rövid időn belül megrendeljük.</p></div>
+   <div class="sv"><b>Házhozszállítás</b><p>Nagyobb tételeknél egyeztetés alapján kiszállítjuk az árut.</p></div>
+   <div class="sv"><b>Szaktanácsadás</b><p>Elmondja, mit épít – mi megmondjuk, mi kell hozzá és mennyi.</p></div>
   </div>
  </div>
 </section>
 
-<section id="ajanlat" style="padding-top:20px">
- <div class="wrap quote reveal">
+<section id="ajanlat">
+ <div class="wrap quote">
   <div>
-   <div class="kicker">Ajánlatkérés</div>
-   <h2>Írja meg, mire van szüksége</h2>
-   <p class="qp">Anyaglista, méretek, mennyiségek – küldje el, és visszahívjuk árral és elérhetőséggel. Gyorsabb, mint végigtelefonálni a környéket.</p>
+   
+   <h2>Ajánlatkérés</h2>
+   <p class="qp">Írja le, mire van szüksége, és visszahívjuk árral.</p>
   </div>
   <form id="qform">
-   <div class="row"><input name="nev" required placeholder="Név"><input name="tel" required type="tel" placeholder="Telefonszám"></div>
-   <textarea name="uzenet" required rows="5" placeholder="pl. 6 db 40x40x2 zártszelvény 3 m-re vágva, 2 doboz 5x60 facsavar"></textarea>
+   <div class="row"><label>Név<input name="nev" required autocomplete="name"></label><label>Telefonszám<input name="tel" required type="tel" autocomplete="tel"></label></div>
+   <label>Mire van szüksége?<textarea id="msg" name="uzenet" required rows="5" placeholder="pl. 6 db 40x40x2 zártszelvény 3 m-re vágva, 2 doboz 5x60 facsavar"></textarea></label>
    <button class="btn btn-red" type="submit">Ajánlatot kérek</button>
-   <small>Az üzenet az Ön levelezőjében nyílik meg, címzett: tiszavas@hotmail.com</small>
+   <small>A gomb a levelezőjét nyitja meg. Ha nem nyílik meg, hívjon: <a href="tel:+36707736427">70/773 64 27</a></small>
   </form>
  </div>
 </section>
 
-<section id="kapcsolat" style="padding-top:40px">
+<section id="kapcsolat">
  <div class="wrap">
-  <div class="head reveal"><div><div class="kicker">Kapcsolat</div><h2>Elérhetőségek</h2></div></div>
+  <div class="head"><div><h2>Nyitvatartás és elérhetőség</h2></div></div>
   <div class="contact">
-   <div class="card reveal">
+   <div class="card">
     <h3><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Nyitvatartás</h3>
     <ul class="hours" id="hours"></ul>
    </div>
-   <div class="map reveal"><iframe loading="lazy" title="TiszaVas Kereskedés térkép" src="https://maps.google.com/maps?q=TiszaVas%20Keresked%C3%A9s%2C%20Tiszavasv%C3%A1ri&z=15&output=embed"></iframe></div>
-   <div class="card reveal">
+   <div class="map"><iframe loading="lazy" title="TiszaVas Kereskedés térkép" src="https://maps.google.com/maps?q=TiszaVas%20Keresked%C3%A9s%2C%20Tiszavasv%C3%A1ri&z=15&output=embed"></iframe></div>
+   <div class="card">
     <h3><svg viewBox="0 0 24 24"><path d="M4 4h16v16H4z"/><path d="m4 6 8 7 8-7"/></svg>Írjon, hívjon</h3>
     <div class="links">
      <a href="tel:+36707736427"><svg viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>70/773 64 27</a>
@@ -389,15 +355,15 @@ else{st.classList.add('closed');let k=1,nx;while(k<8){nx=H.find(h=>h[0]===(d+k)%
  const today=t[2]&&mins<m(t[2]);tx.textContent='Zárva · nyit '+(today?'ma '+t[2]:(k===1?'holnap ':nx[1].toLowerCase()+' ')+nx[2])}
 document.getElementById('y').textContent=now.getFullYear();
 
-// brand marquee
+// brands: the well known ones first, the rest behind a button
 const B='modeco toptools decocolor tradeforce berner berger coverguard crater dewalt esab euroelzett flexovit hoteche wtools legrand rawlplug wago wiha yato abus chromos united drschenk einhell entac extol festa hans herman hikoki maxell kendo koelner anbo finder stanley neo verto topex bosch tkk dedra metabo portwest sola strendpro'.split(' ');
-const tile=n=>`<div class="tile"><img src="brands/${n}.webp" alt="${n}" loading="lazy"></div>`;
-const half=Math.ceil(B.length/2),a=B.slice(0,half),b=B.slice(half);
-document.getElementById('m1').innerHTML=(a.map(tile).join('')).repeat(2);
-document.getElementById('m2').innerHTML=(b.map(tile).join('')).repeat(2);
+const tile=n=>`<div class="tile"><img src="brands/${n}.webp" alt="${n.toUpperCase()}" loading="lazy"></div>`;
+const TOP=['bosch','dewalt','stanley','einhell','hikoki','esab','legrand','wago','abus','yato','wiha','rawlplug'].filter(n=>B.includes(n));
+document.getElementById('m1').innerHTML=TOP.map(tile).join('');
+document.getElementById('m2').innerHTML=B.filter(n=>!TOP.includes(n)).map(tile).join('');
 
-// today's hours in the info bar
-document.getElementById('info-h').textContent='Ma: '+(t[2]?t[2]+' – '+t[3]:'zárva');
+// today's hours in the info bar and the strip
+const todayH='Ma: '+(t[2]?t[2]+' – '+t[3]:'zárva');document.getElementById('info-h').textContent=todayH;document.getElementById('strip-h').textContent=todayH;
 // search over categories and brands
 const KW=['zartszelveny zártszelvény laposvas szogvas szögvas betonacel betonacél idomacel cso lemez profil kortvas köracél','flex sarokcsiszolo sarokcsiszoló furo fúró csavarbehajto kalapacs kalapács fogo fogó villaskulcs meroszalag mérőszalag vizmerték vizmerteg korfuresz körfűrész','csavar anya alatet alátét szeg szegecs dubel dübel menetes szar tipli','cso cső idom szelep tomlo tömlő karmantyu karmantyú konyok könyök','hegeszto hegesztő elektroda elektróda huzal pajzs pálca palca maszk','festek festék alapozo alapozó rozsdagatlo rozsdagátló higito hígító spray aerosol lakk','kabel kábel konnektor kapcsolo kapcsoló biztositek biztosíték ledes led','tegla tégla szigeteles szigetelés ragaszto ragasztó szilikon habarcs cement'];
 const CATS=[...document.querySelectorAll('.cat')].map((c,i)=>({n:c.querySelector('h3').textContent,d:c.querySelector('p').textContent+' '+KW[i],el:c}));
@@ -406,11 +372,12 @@ const q=document.getElementById('q'),res=document.getElementById('results');
 q.oninput=()=>{const v=fold(q.value.trim());if(v.length<2){res.classList.remove('show');return}
  const hc=CATS.filter(c=>fold(c.n+' '+c.d).includes(v)).slice(0,4),hb=B.filter(b=>fold(b).includes(v)).slice(0,3);
  res.innerHTML=hc.map(c=>`<a href="#termekek" data-c="${CATS.indexOf(c)}">${c.n}<small>kategória</small></a>`).join('')+
-  hb.map(b=>`<a href="#markak">${b.toUpperCase()}<small>márka – kapható</small></a>`).join('')+
-  (hc.length||hb.length?'':`<a href="tel:+36707736427">Nem találja? Hívjon, beszerezzük<small>70/773 64 27</small></a>`);
+  hb.map(b=>`<a href="#markak">${b.toUpperCase()}<small>márka</small></a>`).join('')+
+  (hc.length||hb.length?'':`<a href="tel:+36707736427">Nem találja? Kérdezze telefonon<small>70/773 64 27</small></a>`);
  res.classList.add('show')};
-res.onclick=e=>{const a=e.target.closest('a[data-c]');if(a){const c=CATS[+a.dataset.c].el;setTimeout(()=>{c.classList.add('open');c.scrollIntoView({behavior:'smooth',block:'center'})},50)}res.classList.remove('show')};
+res.onclick=e=>{const a=e.target.closest('a[data-c]');if(a){const c=CATS[+a.dataset.c].el;setTimeout(()=>{c.classList.add('hit');c.scrollIntoView({behavior:'smooth',block:'center'})},50)}res.classList.remove('show')};
 document.addEventListener('click',e=>{if(!e.target.closest('.search'))res.classList.remove('show')});
+document.getElementById('search').onsubmit=e=>{e.preventDefault();const a=res.querySelector('a[data-c],a[href="#markak"]');if(a)a.click()};
 // quote form -> the visitor's mail app, addressed to the shop
 document.getElementById('qform').onsubmit=e=>{e.preventDefault();const f=new FormData(e.target);
  location.href='mailto:tiszavas@hotmail.com?subject='+encodeURIComponent('Ajánlatkérés – '+f.get('nev'))+'&body='+encodeURIComponent(f.get('uzenet')+'\n\nNév: '+f.get('nev')+'\nTelefon: '+f.get('tel'))};
@@ -418,21 +385,9 @@ document.getElementById('qform').onsubmit=e=>{e.preventDefault();const f=new For
 const bg=document.getElementById('burger');
 bg.onclick=()=>{const o=document.body.classList.toggle('nav-open');bg.setAttribute('aria-expanded',o)};
 document.querySelectorAll('#menu a').forEach(a=>a.onclick=()=>document.body.classList.remove('nav-open'));
-document.querySelectorAll('.cat').forEach(c=>c.onclick=e=>{if(e.target.closest('a'))return;c.classList.toggle('open')});
-// header + reveal
+document.querySelectorAll('.cat').forEach(c=>c.onclick=()=>{document.getElementById('msg').value='Érdeklődöm: '+c.dataset.c+' – '});
+// header
 const hdr=document.getElementById('top');addEventListener('scroll',()=>hdr.classList.toggle('solid',scrollY>40),{passive:true});
-const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
-document.querySelectorAll('.reveal').forEach((el,i)=>{el.style.transitionDelay=(i%4)*70+'ms';io.observe(el)});
-
-// welding sparks in the hero
-const cv=document.getElementById('sparks'),cx=cv.getContext('2d');let W,Hh,P=[];
-const rs=()=>{W=cv.width=cv.offsetWidth*devicePixelRatio;Hh=cv.height=cv.offsetHeight*devicePixelRatio};rs();addEventListener('resize',rs);
-if(!matchMedia('(prefers-reduced-motion: reduce)').matches)(function f(){
- if(P.length<90)for(let i=0;i<3;i++)P.push({x:W*(.2+Math.random()*.6),y:Hh*1.02,vx:(Math.random()-.5)*2.2,vy:-(2+Math.random()*4.5),l:1});
- cx.clearRect(0,0,W,Hh);cx.globalCompositeOperation='lighter';
- P=P.filter(p=>(p.x+=p.vx,p.y+=p.vy,p.vy+=.035,p.l-=.007,p.l>0));
- for(const p of P){cx.strokeStyle=`rgba(255,${120+120*p.l|0},60,${p.l*.7})`;cx.lineWidth=1.6*devicePixelRatio;cx.beginPath();cx.moveTo(p.x,p.y);cx.lineTo(p.x-p.vx*3,p.y-p.vy*3);cx.stroke()}
- requestAnimationFrame(f)})();
 </script>
 </body>
 </html>
