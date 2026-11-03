@@ -52,21 +52,48 @@ body.nav-open .burger span:last-child{transform:translateY(-4px) rotate(-45deg)}
 .menu .btn{margin-top:26px}
 body.nav-open .menu{opacity:1;pointer-events:auto}
 body.nav-open{overflow:hidden}
+.info{position:fixed;inset:0 0 auto;z-index:51;height:34px;background:#070708;border-bottom:1px solid var(--line);font-size:13px;color:var(--mute)}
+.info .wrap{display:flex;gap:26px;align-items:center;height:100%}
+.info a:hover{color:#fff}.info .sp{flex:1}
+.info a[href="#ajanlat"]{color:var(--red);font-weight:600}
+.top{top:34px}
+.search{position:relative;width:min(560px,92vw)}
+.search svg{position:absolute;z-index:1;left:18px;top:50%;translate:0 -50%;width:20px;height:20px;stroke:var(--mute);fill:none;stroke-width:2}
+.search input{width:100%;padding:17px 18px 17px 50px;border-radius:14px;border:1px solid #34353a;background:rgba(18,18,20,.85);backdrop-filter:blur(8px);color:#fff;font:500 16px Barlow;outline:none;transition:border-color .2s,box-shadow .2s}
+.search input:focus{border-color:var(--red);box-shadow:0 0 0 4px rgba(227,32,43,.18)}
+.results{position:absolute;left:0;right:0;top:calc(100% + 8px);background:#141416;border:1px solid #2a2b30;border-radius:14px;overflow:hidden;text-align:left;display:none;z-index:5;box-shadow:0 20px 50px rgba(0,0,0,.6)}
+.results.show{display:block}
+.results a{display:flex;justify-content:space-between;gap:12px;padding:13px 18px;border-top:1px solid #1f1f23;font-size:15px}
+.results a:first-child{border-top:0}
+.results a:hover{background:#1c0d0e}
+.results small{color:var(--mute)}
+.svc{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.sv{padding:26px;border-radius:var(--r);border:1px solid var(--line);background:var(--bg2);border-left:3px solid var(--red)}
+.sv b{display:block;font:800 22px "Barlow Condensed";text-transform:uppercase;margin-bottom:8px}
+.sv p{color:var(--mute);font-size:15px}
+.quote{display:grid;grid-template-columns:1fr 1.1fr;gap:50px;padding:46px;border-radius:22px;border:1px solid #3a1518;background:radial-gradient(80% 120% at 0% 0%,rgba(227,32,43,.16),transparent 60%),var(--bg2)}
+.qp{color:var(--steel);margin-top:18px;max-width:44ch}
+#qform{display:grid;gap:12px}
+#qform .row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+#qform input,#qform textarea{width:100%;padding:15px 16px;border-radius:12px;border:1px solid #2e2f34;background:#0d0d0f;color:#fff;font:500 15px Barlow;outline:none;resize:vertical}
+#qform input:focus,#qform textarea:focus{border-color:var(--red)}
+#qform .btn{justify-content:center;border:0;cursor:pointer;font:600 16px Barlow;color:#fff}
+#qform small{color:var(--mute)}
 /* hero */
 .hero{position:relative;min-height:100svh;display:grid;place-items:center;padding:120px 0 80px;isolation:isolate;overflow:hidden}
 .hero::before{content:"";position:absolute;inset:0;z-index:-2;background:radial-gradient(60% 50% at 50% 38%,rgba(227,32,43,.28),transparent 70%),radial-gradient(90% 70% at 50% 120%,#000,transparent),var(--bg)}
 .hero>.plate{position:absolute;inset:auto 0 0;height:34%;z-index:-1;-webkit-mask:linear-gradient(transparent,#000 70%);mask:linear-gradient(transparent,#000 70%);opacity:.75}
 .sparks{position:absolute;inset:0;width:100%;height:100%;z-index:-1;pointer-events:none}
-.hero-in{text-align:center;display:grid;justify-items:center;gap:30px}
-.mark{width:min(620px,88vw);animation:rise 1s cubic-bezier(.2,.8,.2,1) both;filter:drop-shadow(0 24px 50px rgba(227,32,43,.35))}
+.hero-in{text-align:center;display:grid;justify-items:center;gap:24px}
+.mark{width:min(470px,88vw);animation:rise 1s cubic-bezier(.2,.8,.2,1) both;filter:drop-shadow(0 24px 50px rgba(227,32,43,.35))}
 @keyframes rise{from{opacity:0;transform:translateY(24px)}}
-.mk-top{display:flex;justify-content:center;align-items:flex-end;font:italic 800 clamp(64px,15vw,150px)/.82 "Barlow Condensed";letter-spacing:-.01em;padding:0 4%;position:relative}
+.mk-top{display:flex;justify-content:center;align-items:flex-end;font:italic 800 clamp(64px,15vw,112px)/.82 "Barlow Condensed";letter-spacing:-.01em;padding:0 4%;position:relative}
 .mk-top::before{content:"";position:absolute;left:4%;right:30%;top:-.06em;height:.12em;background:var(--red);transform:skewX(-18deg)}
 .mk-t{color:#e9eaee;padding-top:.14em}
 .mk-v{color:var(--red);font-size:1.18em;letter-spacing:.02em;text-shadow:0 0 30px rgba(227,32,43,.45)}
-.mk-plate{margin-top:.5em;border-radius:6px;padding:.32em 0 .38em;text-align:center;font-size:clamp(26px,6.2vw,58px);box-shadow:inset 0 1px 0 rgba(255,255,255,.25),inset 0 -2px 0 rgba(0,0,0,.5);background-color:#9a9ea5}
+.mk-plate{margin-top:.5em;border-radius:6px;padding:.32em 0 .38em;text-align:center;font-size:clamp(26px,6.2vw,40px);box-shadow:inset 0 1px 0 rgba(255,255,255,.25),inset 0 -2px 0 rgba(0,0,0,.5);background-color:#9a9ea5}
 .mk-plate span{font:italic 800 1em/1 "Barlow Condensed";letter-spacing:.22em;color:var(--red);-webkit-text-stroke:.035em #111;paint-order:stroke fill;text-shadow:0 .05em 0 #111;padding-left:.22em}
-.hero h1{font-size:clamp(40px,7.4vw,92px);font-weight:800;max-width:14ch}
+.hero h1{font-size:clamp(40px,6.4vw,70px);font-weight:800;max-width:14ch}
 .hero h1 em{font-style:italic;color:var(--red);text-shadow:0 0 40px rgba(227,32,43,.5)}
 .hero p{color:var(--steel);font-size:clamp(16px,2vw,19px);max-width:52ch}
 .ctas{display:flex;gap:14px;flex-wrap:wrap;justify-content:center}
@@ -168,6 +195,10 @@ footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;
  .map{min-height:320px}
  .why{grid-template-columns:1fr}
  .nav{display:none}
+ .info{display:none}
+ .top{top:0}
+ .svc{grid-template-columns:1fr 1fr}
+ .quote{grid-template-columns:1fr;padding:28px;gap:26px}
  .status{margin-left:auto}
  .burger{display:flex}
  .stats .wrap{grid-template-columns:repeat(2,1fr)}
@@ -178,6 +209,8 @@ footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;
 @media (max-width:560px){
  section{padding:80px 0}
  .cats{grid-template-columns:1fr}
+ .svc{grid-template-columns:1fr}
+ #qform .row{grid-template-columns:1fr}
  .brand{font-size:22px}
  .status{font-size:12px;padding:6px 10px}
  .dock{display:grid;grid-template-columns:1fr 1fr;gap:10px;position:fixed;left:12px;right:12px;bottom:12px;z-index:60}
@@ -192,18 +225,19 @@ footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;
 </head>
 <body>
 
+<div class="info"><div class="wrap"><a href="tel:+36707736427">70/773 64 27</a><a href="mailto:tiszavas@hotmail.com">tiszavas@hotmail.com</a><span id="info-h"></span><span class="sp"></span><a href="#ajanlat">Ajánlatkérés</a></div></div>
 <header class="top" id="top">
  <div class="wrap">
   <a class="brand" href="#">TISZA<b>VAS</b></a>
   <nav class="nav">
-   <a href="#termekek">Termékek</a><a href="#markak">Márkák</a><a href="#rolunk">Rólunk</a><a href="#kapcsolat">Kapcsolat</a>
+   <a href="#termekek">Termékek</a><a href="#szolgaltatasok">Szolgáltatások</a><a href="#markak">Márkák</a><a href="#rolunk">Rólunk</a><a href="#kapcsolat">Kapcsolat</a>
   </nav>
   <div class="status" id="status"><span class="dot"></span><span id="status-t">Nyitvatartás</span></div>
   <button class="burger" id="burger" aria-label="Menü" aria-expanded="false"><span></span><span></span></button>
  </div>
 </header>
 <nav class="menu" id="menu">
- <a href="#termekek">Termékek</a><a href="#markak">Márkák</a><a href="#rolunk">Rólunk</a><a href="#kapcsolat">Kapcsolat</a>
+ <a href="#termekek">Termékek</a><a href="#markak">Márkák</a><a href="#szolgaltatasok">Szolgáltatások</a><a href="#ajanlat">Ajánlatkérés</a><a href="#kapcsolat">Kapcsolat</a>
  <a class="btn btn-red" href="tel:+36707736427">Hívás: 70/773 64 27</a>
 </nav>
 
@@ -217,6 +251,11 @@ footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;
   </div>
   <h1>Vas, szerszám, <em>építőanyag</em> – egy helyen.</h1>
   <p>Acéltól a csavarig, festéktől a hegesztőpálcáig: minden, ami a műhelybe, az építkezésre és a házkörüli munkákhoz kell – szakértő tanácsadással, Tiszavasváriban.</p>
+  <form class="search" id="search" role="search" onsubmit="return false">
+   <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></svg>
+   <input id="q" type="search" placeholder="Mit keres? pl. zártszelvény, flex, csavar, Bosch…" autocomplete="off" aria-label="Keresés a kínálatban">
+   <div class="results" id="results"></div>
+  </form>
   <div class="ctas">
    <a class="btn btn-red" href="tel:+36707736427"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>70/773 64 27</a>
    <a class="btn btn-ghost" href="#kapcsolat"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s7-6.2 7-12a7 7 0 1 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg>Nyitvatartás és térkép</a>
@@ -276,6 +315,34 @@ footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;
  </div>
 </section>
 
+<section id="szolgaltatasok" style="padding-top:20px">
+ <div class="wrap">
+  <div class="head reveal"><div><div class="kicker">Szolgáltatások</div><h2>Nem csak eladunk</h2></div><p>Amit a nagy áruházak nem adnak meg: személyes kiszolgálás és rugalmasság.</p></div>
+  <div class="svc">
+   <div class="sv reveal"><b>Méretre vágás</b><p>A vasanyagot a kívánt hosszra vágjuk, hogy otthon már csak szerelni kelljen.</p></div>
+   <div class="sv reveal"><b>Rendelésre beszerzés</b><p>Ami nincs a polcon, azt a beszállítóinktól rövid időn belül megrendeljük.</p></div>
+   <div class="sv reveal"><b>Házhozszállítás</b><p>Nagyobb tételeknél egyeztetés alapján kiszállítjuk az árut.</p></div>
+   <div class="sv reveal"><b>Szaktanácsadás</b><p>Elmondja, mit épít – mi megmondjuk, mi kell hozzá és mennyi.</p></div>
+  </div>
+ </div>
+</section>
+
+<section id="ajanlat" style="padding-top:20px">
+ <div class="wrap quote reveal">
+  <div>
+   <div class="kicker">Ajánlatkérés</div>
+   <h2>Írja meg, mire van szüksége</h2>
+   <p class="qp">Anyaglista, méretek, mennyiségek – küldje el, és visszahívjuk árral és elérhetőséggel. Gyorsabb, mint végigtelefonálni a környéket.</p>
+  </div>
+  <form id="qform">
+   <div class="row"><input name="nev" required placeholder="Név"><input name="tel" required type="tel" placeholder="Telefonszám"></div>
+   <textarea name="uzenet" required rows="5" placeholder="pl. 6 db 40x40x2 zártszelvény 3 m-re vágva, 2 doboz 5x60 facsavar"></textarea>
+   <button class="btn btn-red" type="submit">Ajánlatot kérek</button>
+   <small>Az üzenet az Ön levelezőjében nyílik meg, címzett: tiszavas@hotmail.com</small>
+  </form>
+ </div>
+</section>
+
 <section id="kapcsolat" style="padding-top:40px">
  <div class="wrap">
   <div class="head reveal"><div><div class="kicker">Kapcsolat</div><h2>Elérhetőségek</h2></div></div>
@@ -329,6 +396,23 @@ const half=Math.ceil(B.length/2),a=B.slice(0,half),b=B.slice(half);
 document.getElementById('m1').innerHTML=(a.map(tile).join('')).repeat(2);
 document.getElementById('m2').innerHTML=(b.map(tile).join('')).repeat(2);
 
+// today's hours in the info bar
+document.getElementById('info-h').textContent='Ma: '+(t[2]?t[2]+' – '+t[3]:'zárva');
+// search over categories and brands
+const CATS=[...document.querySelectorAll('.cat')].map(c=>({n:c.querySelector('h3').textContent,d:c.querySelector('p').textContent,el:c}));
+const fold=x=>x.normalize('NFD').replace(/[̀-ͯ]/g,'').toLowerCase();
+const q=document.getElementById('q'),res=document.getElementById('results');
+q.oninput=()=>{const v=fold(q.value.trim());if(v.length<2){res.classList.remove('show');return}
+ const hc=CATS.filter(c=>fold(c.n+' '+c.d).includes(v)).slice(0,4),hb=B.filter(b=>fold(b).includes(v)).slice(0,3);
+ res.innerHTML=hc.map(c=>`<a href="#termekek" data-c="${CATS.indexOf(c)}">${c.n}<small>kategória</small></a>`).join('')+
+  hb.map(b=>`<a href="#markak">${b.toUpperCase()}<small>márka – kapható</small></a>`).join('')+
+  (hc.length||hb.length?'':`<a href="tel:+36707736427">Nem találja? Hívjon, beszerezzük<small>70/773 64 27</small></a>`);
+ res.classList.add('show')};
+res.onclick=e=>{const a=e.target.closest('a[data-c]');if(a){const c=CATS[+a.dataset.c].el;setTimeout(()=>{c.classList.add('open');c.scrollIntoView({behavior:'smooth',block:'center'})},50)}res.classList.remove('show')};
+document.addEventListener('click',e=>{if(!e.target.closest('.search'))res.classList.remove('show')});
+// quote form -> the visitor's mail app, addressed to the shop
+document.getElementById('qform').onsubmit=e=>{e.preventDefault();const f=new FormData(e.target);
+ location.href='mailto:tiszavas@hotmail.com?subject='+encodeURIComponent('Ajánlatkérés – '+f.get('nev'))+'&body='+encodeURIComponent(f.get('uzenet')+'\n\nNév: '+f.get('nev')+'\nTelefon: '+f.get('tel'))};
 // menu + cards
 const bg=document.getElementById('burger');
 bg.onclick=()=>{const o=document.body.classList.toggle('nav-open');bg.setAttribute('aria-expanded',o)};
